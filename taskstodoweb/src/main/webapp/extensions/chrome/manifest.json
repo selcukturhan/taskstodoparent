@@ -1,0 +1,21 @@
+{
+  "name": "TasksToDo",
+  "description": "A simple app to track you browsing history related to your tasks.",
+  "version": "1.0",
+  "app": {
+    "launch": {
+      "local_path": "index.html"
+    }
+  },
+  "icons": {
+    "16":  "icon.png",
+    "128": "logo.png"
+  },
+  "permissions": [ 
+    "http://localhost:8080/*",
+    "unlimitedStorage", 
+    "history", 
+    "notifications",
+    "tabs"
+  ]
+}

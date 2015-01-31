@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
+						http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping>
+		<class-a>org.taskstodo.entity.Task</class-a>
+		<class-b>org.taskstodo.to.TaskTO</class-b>
+		<field>
+  			<a>taskId</a>
+  			<b>id</b>
+		</field>
+		<field>
+			<a>childTasks</a>
+			<b>childTasks</b>
+			<b-hint>org.taskstodo.to.TaskTO</b-hint>
+		</field>
+		<field>
+			<a>keywords</a>
+			<b>keywords</b>
+			<b-hint>org.taskstodo.to.KeywordTO</b-hint>
+		</field>
+		<field>
+			<a>fileUploads</a>
+			<b>fileUploads</b>
+			<b-hint>org.taskstodo.to.FileLoadTO</b-hint>
+		</field>
+		<field>
+			<a>notes</a>
+			<b>notes</b>
+			<b-hint>org.taskstodo.to.NoteTO</b-hint>
+		</field>
+		<field>
+			<a>owner</a>
+			<b>owner</b>
+			<b-hint>org.taskstodo.to.UserTO</b-hint>
+		</field>
+	</mapping>
+</mappings>

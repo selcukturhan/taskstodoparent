@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.taskstodo.entity">
+	<class name="Task">
+		<id name="taskId" type="long">
+			<generator class="native"/>
+		</id>
+		
+		<property name="title" 				type="string"/>
+		<property name="description" 		type="string"/>
+		
+		<property name="priority" not-null="true">
+	      <type name="org.hibernate.type.EnumType">
+	         <param name="enumClass">org.taskstodo.common.Priority</param>
+	         <param name="type">12</param>
+	         <param name="useNamed">true</param>
+	      </type>
+	    </property>
+		<!-- 	
+		<property name="taskType" not-null="true">
+	      <type name="org.hibernate.type.EnumType">
+	         <param name="enumClass">org.taskstodo.common.TaskType</param>
+	         <param name="type">12</param>
+	         <param name="useNamed">true</param>
+	      </type>
+	    </property>
+		 -->
+		<property name="startDate" 			type="timestamp"/>
+		<property name="endDate" 			type="timestamp"/>
+		<property name="creationDate" 		type="timestamp"/>
+		<property name="lastModifiedDate" 	type="timestamp"/>
+		<property name="finished" 			type="org.hibernate.type.NumericBooleanType"/>
+		
+		<many-to-one name="owner" class="User">
+			<column name="userId"></column>
+		</many-to-one>
+
+		<many-to-one name="parentTask" class="Task" cascade="save-update">
+			<column name="associateTaskId" ></column>
+		</many-to-one>
+		
+		<set name="childTasks" inverse="true" cascade="all">
+			<key column="associateTaskId"/>
+	    	<one-to-many class="Task"/>
+		</set>
+		
+		<set name="keywords" inverse="true" cascade="all">
+			<key column="taskId"/>
+	  		<one-to-many class="Keyword"/>
+		</set>
+		
+		<set name="fileUploads" inverse="true" cascade="all">
+			<key column="taskId"/>
+	  		<one-to-many class="FileUpload"/>
+		</set>
+		
+		<set name="notes" inverse="true" cascade="all">
+			<key column="taskId"/>
+			<one-to-many class="Note"/>
+		</set>
+		
+		<set name="searchItems" inverse="true" cascade="all">
+			<key column="taskId"/>
+	  		<one-to-many class="SearchItem"/>
+		</set>
+	 
+	</class>
+</hibernate-mapping>

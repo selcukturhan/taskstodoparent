@@ -1,0 +1,1081 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="946b930e-8134-4606-b2c7-80bac00acd17" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/First.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../taskcontextsearch/src/main/resources/r.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/common/NodeCombination.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/common/Priority.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/common/TaskType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/IAdminDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/IFileUploadDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/IGenericDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/IKeywordDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/INoteDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/IRoleDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/ISearchItemDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/ITaskDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/IUserDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/AdminDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/FileUploadDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/GenericDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/KeywordDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/NoteDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/RoleDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/SearchItemDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/TaskDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/dao/impl/UserDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/FileUpload.hbm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/FileUpload.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/Keyword.hbm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/Keyword.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/Note.hbm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/Note.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/Role.hbm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/Role.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/SearchItem.hbm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/SearchItem.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/Task.hbm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/Task.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/User.hbm.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/entity/User.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/protocol/CustomDateDeserializer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/protocol/CustomDateSerializer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/protocol/CustomKeywordsDeserializer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/IAdminService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/IFileloadService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/IKeywordService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/INoteService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/ISearchItemService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/ITaskService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/AbstractService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/AdminService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/FileDataSink.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/FileloadService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/IDataSink.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/KeywordService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/NoteService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/RestUserDetailsService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/SearchItemService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/TaskService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/UserSecurityContraintAspect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/service/impl/WeightedTaskHierarchieSearchService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/FileDownloadUnit.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/FileLoadTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/ImageTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/KeywordTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/NoteTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/RoleKeyValueTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/RoleTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/SearchItemTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/TaskTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/to/UserTO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/dataAccessContext.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/dozermappings/dozerFileLoadMapping.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/dozermappings/dozerKeywordMapping.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/dozermappings/dozerNoteMapping.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/dozermappings/dozerRoleMapping.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/dozermappings/dozerSearchItemMapping.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/dozermappings/dozerTaskMapping.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/dozermappings/dozerUserMapping.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/test/java/org/taskstodo/dao/GoogleSearchClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/test/java/org/taskstodo/dao/ISearchEngineService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/test/java/org/taskstodo/dao/IndexingExamples.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/test/java/org/taskstodo/dao/TaskDAOTest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/test/java/org/taskstodo/dao/jdbc.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/test/java/org/taskstodo/dao/testContext.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/README.md" afterPath="$PROJECT_DIR$/../tasksTodoWeb/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/anchor.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/anchor.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/bg.jpg" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/bg.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/d.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/d.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default/d.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default/d.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/d.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/d.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/d.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/d.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default/d.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default/d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/d.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/d.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/dot_for_ie.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/dot_for_ie.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/dot_for_ie.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/dot_for_ie.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/dots.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/dots.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/fu.jpg" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/fu.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/ggcov.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/ggcov.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/fonts/glyphicons-halflings-regular.eot" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/fonts/glyphicons-halflings-regular.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/fonts/glyphicons-halflings-regular.woff" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/fonts/glyphicons-halflings-regular.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/glyphicons-halflings-white.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/glyphicons-halflings.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon-small.eot" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon-small.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon-small.ttf" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon-small.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon-small.woff" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon-small.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon.eot" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon.eot" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon.ttf" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon.ttf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon.woff" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon.woff" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/icon.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/iconExcel.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/iconExcel.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/iconPdf.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/iconPdf.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/iconWord.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/iconWord.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/loader.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/loader.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/logo.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/logo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/media/moxieplayer.swf" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/media/moxieplayer.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/note.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/note.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/object.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/object.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/rootNode.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/rootNode.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/searchTask.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/searchTask.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-cool.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-cool.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-cry.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-cry.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-embarassed.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-embarassed.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-foot-in-mouth.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-frown.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-frown.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-innocent.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-innocent.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-kiss.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-kiss.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-laughing.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-laughing.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-money-mouth.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-sealed.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-sealed.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-smile.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-smile.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-surprised.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-surprised.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-tongue-out.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-undecided.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-undecided.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-wink.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-wink.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-yell.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/img/smiley-yell.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/taskGroup.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/taskGroup.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/throbber.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/throbber.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/throbber.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/throbber.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default/throbber.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default/throbber.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/throbber.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/throbber.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/trans.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/trans.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/wline.gif" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/img/wline.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/workTask.png" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/img/workTask.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/.classpath" afterPath="$PROJECT_DIR$/../tasksTodoWeb/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/.gitignore" afterPath="$PROJECT_DIR$/../tasksTodoWeb/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/.project" afterPath="$PROJECT_DIR$/../tasksTodoWeb/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/AdminController.java" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/FileLoadController.java" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/FileLoadController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/JSON2ObjectMapper.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/JSON2ObjectMapper.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/KeywordController.java" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/KeywordController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/META-INF/MANIFEST.MF" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/META-INF/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/model/Model.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/model/Model.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/NoteController.java" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/NoteController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/SearchItemController.java" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/SearchItemController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/TaskController.java" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/TaskController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/Utilities.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/Utilities.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tasks/admin.html" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tasks/admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/admin.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/admin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/css/application.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/css/application.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/application.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/applicationContext.properties" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/applicationContext.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/applicationContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ar.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.bg.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ca.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.cs.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.cy.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.cy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.da.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.de.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.el.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.es.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.et.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.fi.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.fr.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.gl.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.he.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.hr.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.hu.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.id.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.is.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.is.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.it.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ja.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/bootstrap-datepicker.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/bootstrap-datepicker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ka.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ka.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.kr.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.kr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.lt.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.lv.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.mk.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ms.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.nb.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.nl-BE.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.nl-BE.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.nl.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.no.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.no.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.pl.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.pt-BR.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.pt-BR.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.pt.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ro.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.rs-latin.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.rs-latin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.rs.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.rs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ru.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sk.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sl.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sq.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sq.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sv.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sw.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.sw.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.th.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.tr.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ua.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.ua.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.uk.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.zh-CN.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.zh-CN.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.zh-TW.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/locales/bootstrap-datepicker.zh-TW.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/css/bootstrap.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/content.inline.min.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/content.inline.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/content.min.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/content.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/META-INF/context.xml" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/META-INF/context.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/cycle.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/cycle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/css/datepicker.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/css/datepicker.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/history.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/history.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon-small.svg" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon-small.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/icomoon.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/index.html" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery-1.11.0.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery-1.11.0.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery-1.8.3.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery-1.8.3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery-1.9.1.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery-1.9.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery-2.1.0.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery-2.1.0.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery.dataTables.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery.dataTables.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery.jstree.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/jquery.jstree.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/json.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/json.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/json2.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/json2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/json_parse.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/json_parse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/json_parse_state.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/json_parse_state.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/license.txt" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/license.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/log4j.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/manifest.json" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/extensions/chrome/manifest.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/advlist/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/advlist/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/anchor/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/anchor/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/autolink/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/autolink/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/autoresize/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/autoresize/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/autosave/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/autosave/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/bbcode/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/bbcode/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/charmap/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/charmap/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/code/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/code/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/contextmenu/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/contextmenu/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/directionality/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/directionality/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/emoticons/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/example/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/example/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/example_dependency/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/example_dependency/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/fullpage/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/fullpage/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/fullscreen/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/fullscreen/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/hr/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/hr/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/image/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/image/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/importcss/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/importcss/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/insertdatetime/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/insertdatetime/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/layer/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/layer/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/legacyoutput/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/legacyoutput/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/link/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/link/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/lists/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/lists/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/media/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/media/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/nonbreaking/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/nonbreaking/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/noneditable/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/noneditable/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/pagebreak/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/pagebreak/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/paste/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/paste/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/preview/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/preview/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/print/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/print/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/save/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/save/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/searchreplace/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/searchreplace/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/spellchecker/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/spellchecker/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/tabfocus/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/tabfocus/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/table/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/table/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/template/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/template/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/textcolor/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/textcolor/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/visualblocks/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/visualblocks/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/visualchars/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/visualchars/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/wordcount/plugin.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/wordcount/plugin.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../taskcontextsearch/pom.xml" afterPath="$PROJECT_DIR$/../taskcontextsearch/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/pom.xml" afterPath="$PROJECT_DIR$/../tasksTodoWeb/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/langs/readme.md" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/langs/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/readme.md" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/fonts/readme.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/securityContext.xml" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/resources/securityContext.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/scripts/setup.sql" afterPath="$PROJECT_DIR$/../tasksTodoWeb/scripts/setup.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/skin.ie7.min.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/skin.ie7.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/skin.min.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/skins/lightgray/skin.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/style.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/apple/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/style.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/classic/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default/style.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/style.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/themes/default-rtl/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tasks/task.html" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tasks/task.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/tasks" afterPath="$PROJECT_DIR$/../tasksTodoWeb/tasks" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/test/resources/test-config.xml" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/test/resources/test-config.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/themes/modern/theme.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/themes/modern/theme.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/tinymce.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/tinymce.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/typeahead.bundle.min.js" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/js/typeahead.bundle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/visualblocks/css/visualblocks.css" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/tinymce/plugins/visualblocks/css/visualblocks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/../tasksTodoWeb/src/main/webapp/WEB-INF/web.xml" />
+    </list>
+    <ignored path="taskstodo.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="taskstodo" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="3366">
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoteTO.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/to/NoteTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1260">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CustomDateDeserializer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/protocol/CustomDateDeserializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="594">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TaskType.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/common/TaskType.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.14583333" vertical-offset="0" max-vertical-offset="864">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../taskstodoparent/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="3222">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../taskcontextsearch/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1872">
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LevelWeightStrategy.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/rank/LevelWeightStrategy.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="306">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IndexingExamples.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/IndexingExamples.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1692">
+              <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankingService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/RankingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="774">
+              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RankingEngine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/rank/RankingEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1476">
+              <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="true" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../taskcontextsearch" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$/../spring-security" value="62883576793983" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/../tasksTodoWeb/pom.xml" />
+        <option value="$PROJECT_DIR$/../taskstodoparent/pom.xml" />
+        <option value="$PROJECT_DIR$/../taskcontextsearch/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../tasktodomodel/src/main/java/to/NoteTO.java" />
+        <option value="$PROJECT_DIR$/../tasktodomodel/src/main/java/protocol/CustomDateDeserializer.java" />
+        <option value="$PROJECT_DIR$/../tasktodomodel/src/main/java/common/TaskType.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-4" />
+    <option name="y" value="25" />
+    <option name="width" value="1928" />
+    <option name="height" value="1035" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="taskstodoservice" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../tasktodomodel/src/main/java" />
+      <recent name="$PROJECT_DIR$/../taskcontextsearch" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="946b930e-8134-4606-b2c7-80bac00acd17" name="Default" comment="" />
+      <created>1410380207516</created>
+      <updated>1410380207516</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-4" y="25" width="1928" height="1035" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24973376" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32968238" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32896176" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3366">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/to/NoteTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1260">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/protocol/CustomDateDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="594">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/common/TaskType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="126" max-vertical-offset="234">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskstodoparent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="3222">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1872">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/rank/LevelWeightStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="306">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/IndexingExamples.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1692">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/RankingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="774">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/rank/RankingEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1476">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3366">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/to/NoteTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1260">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/protocol/CustomDateDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="594">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/common/TaskType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="234">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskstodoparent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="342" max-vertical-offset="3222">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1872">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/rank/LevelWeightStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="306">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/IndexingExamples.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1692">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/RankingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="774">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/rank/RankingEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="450" max-vertical-offset="1476">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2574">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="3366">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="1908">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskstodoparent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="288" max-vertical-offset="3204">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2700">
+          <caret line="59" column="20" selection-start-line="59" selection-start-column="20" selection-end-line="59" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="3366">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="522" max-vertical-offset="1908">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskstodoparent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="324" max-vertical-offset="3222">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/taskstodo/dao/INoteDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08117249" vertical-offset="0" max-vertical-offset="887">
+          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/taskstodo/to/TaskTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2736">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/taskstodo/common/NodeCombination.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="648">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/TaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="566" max-vertical-offset="1206">
+          <caret line="72" column="24" selection-start-line="72" selection-start-column="24" selection-end-line="72" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/SearchItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.061643835" vertical-offset="0" max-vertical-offset="1062">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67808217" vertical-offset="0" max-vertical-offset="612">
+          <caret line="22" column="20" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1720" max-vertical-offset="2574">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasksTodoWeb/src/main/java/org/taskstodo/controller/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
+          <caret line="29" column="30" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskstodoparent/taskstodoparent.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="885">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskstodoparent/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3222">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/rank/LevelWeightStrategy.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/IndexingExamples.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1368">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="216" max-vertical-offset="1872">
+          <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/RankingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="774">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../taskcontextsearch/src/main/java/taskcontextsearch/rank/RankingEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="1224">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3366">
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/to/NoteTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/protocol/CustomDateDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../tasktodomodel/src/main/java/common/TaskType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14583333" vertical-offset="0" max-vertical-offset="864">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

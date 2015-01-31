@@ -1,0 +1,13 @@
+*.class
+*.jar
+*.war*
+*.ear
+*.svn
+target/
+.metadata
+bin/
+tmp/
+.settings/
+.loadpath
+*.launch
+*.buildpath

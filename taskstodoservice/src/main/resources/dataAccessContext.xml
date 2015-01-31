@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jee="http://www.springframework.org/schema/jee"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx-3.2.xsd
+        http://www.springframework.org/schema/jee
+        http://www.springframework.org/schema/jee/spring-jee-3.2.xsd">
+
+
+	<jee:jndi-lookup id="dataSource" jndi-name="jdbc/TaskDB" resource-ref="true" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mappingResources">
+			<list>
+	        	<value>org/taskstodo/entity/Task.hbm.xml</value>
+	        	<value>org/taskstodo/entity/Keyword.hbm.xml</value>
+	        	<value>org/taskstodo/entity/FileUpload.hbm.xml</value>
+	        	<value>org/taskstodo/entity/Note.hbm.xml</value>
+	        	<value>org/taskstodo/entity/User.hbm.xml</value>
+	 			<value>org/taskstodo/entity/Role.hbm.xml</value>
+	 			<value>org/taskstodo/entity/SearchItem.hbm.xml</value>
+	        </list>
+      	 </property>
+		<property name="hibernateProperties">
+			<value>
+            hibernate.hbm2ddl.auto=update
+            hibernate.dialect=org.hibernate.dialect.MySQL5Dialect
+         	</value>
+		</property>
+	</bean>
+
+	
+	<tx:annotation-driven transaction-manager="txManager"/>
+   	<bean id="txManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+      <property name="sessionFactory" ref="sessionFactory" />
+   	</bean>
+
+</beans>

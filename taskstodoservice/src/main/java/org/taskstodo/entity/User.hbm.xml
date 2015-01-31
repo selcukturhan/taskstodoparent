@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.taskstodo.entity">
+	
+	<class name="User">
+		<id name="userId" type="long">
+			<generator class="native"/>
+		</id>
+		
+		<property name="firstname" 	type="string"/>
+		<property name="surname" 	type="string"/>
+		<property name="username" 	type="string"/>
+		<property name="password" 	type="string"/>
+		<property name="mail" 		type="string"/>
+		
+		<set name="tasks" inverse="true" cascade="all">
+			<key column="userId"/>
+	   		<one-to-many class="Task"/>
+		</set>
+		
+
+		<set name="roles" cascade="all" table="USER_ROLE">
+			<key column="userId"/>
+			<many-to-many class="Role" column="roleId"/>
+		</set>
+		
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,29 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+      http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+ 
+    <http create-session="never" entry-point-ref="digestEntryPoint">
+        <intercept-url pattern="*/admin.html" access="ROLE_ADMIN" />
+        <intercept-url pattern="/**" access="ROLE_USER" />
+        <custom-filter ref="digestFilter" position="FORM_LOGIN_FILTER" />
+    </http>
+ 
+ 	<beans:bean id="digestEntryPoint" class="org.springframework.security.web.authentication.www.DigestAuthenticationEntryPoint">
+		<beans:property name="realmName" value="Contacts Realm via Digest Authentication" />
+		<beans:property name="key" value="acegi" />
+	</beans:bean>
+
+	<beans:bean id="digestFilter" class="org.springframework.security.web.authentication.www.DigestAuthenticationFilter">
+		<beans:property name="userDetailsService" ref="restUserDetailsService" />
+		<beans:property name="authenticationEntryPoint" ref="digestEntryPoint" />
+	</beans:bean>
+ 
+    <authentication-manager>
+        <authentication-provider user-service-ref="restUserDetailsService" />
+    </authentication-manager>
+ 
+ 	<global-method-security secured-annotations="enabled" />
+</beans:beans>

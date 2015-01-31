@@ -1,0 +1,17 @@
+Next steps:
+Adjust User/Role/Privilegs models 1 Std
+Use Msgarea lib 1 Tag
+Exceptionhandling
+Consider REST-Controller returntypes (Resultmap) 1 Tag
+cleanupfunc fur modals
+sonstiges (seitegr����e fixieren, css, scrollbars, etc.)
+Tasten aktivieren => nur wenn task gew��hlt
+History
+I8N
+
+
+Bugs:
+@BugId2:Adjust foreigenkey constraints for role-user
+
+
+export MAVEN_OPTS='-Xdebug -Xrunjdwp:transport=dt_socket,address=4000,server=y,suspend=y'

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>tasksTodo</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+        .body {
+  			padding-top: 50px;
+		}
+		.taskTreeStyle{
+	  		min-height: 100%;
+	  	}	
+      
+    </style>
+	<link rel="stylesheet" href="../css/bootstrap.css"type="text/css" />
+	<link rel="stylesheet" href="../css/bootstrap-theme.css" type="text/css" />
+	
+	<link rel="stylesheet" href="../css/datepicker.css" type="text/css" />
+	<link rel="stylesheet" href="../css/application.css" type="text/css" />
+	
+	<script src="../js/jquery-1.8.3.min.js" type="text/javascript"></script>
+	<script src="../js/jquery.dataTables.min.js" type="text/javascript" ></script>
+	
+	<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="../js/bootstrap-datepicker.js" type="text/javascript"></script>
+	
+	<script src="../js/jquery.jstree.js" type="text/javascript"></script>
+	<script src="../js/application.js" type="text/javascript"></script>
+	<script src="../js/model/Model.js" type="text/javascript"></script>
+	<script src="../js/Utilities.js" type="text/javascript"></script>
+	<script src="../js/JSON2ObjectMapper.js" type="text/javascript"></script>
+	
+	<script src="../tinymce/tinymce.min.js" type="text/javascript"></script>
+	<script src="../js/typeahead.bundle.min.js" type="text/javascript"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body onload="initForm();">
+	
+	<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">tasksTodo</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a data-toggle="modal" href="#modalSearchHistory">SearchHistory</a></li>
+            <li class="active"><a data-toggle="modal" href="#modalTaskcontextSearch">TaskcontextSearch</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+	
+	
+	<div class="container" style="padding-top: 7%">
+		<div class="row">
+			<div class="col-md-3">
+		    	<div class="well sidebar-nav" style="height: 550px; overflow:auto;">
+		        	<div class="taskTreeStyle" id="taskTree"></div>
+		         </div><!--/.well -->
+		    </div><!--/col-md-3-->
+				
+			<div class="col-md-9">
+				<div class="hero-unit">
+					<div class="row">
+						<div class="col-md-2 col-lg-3">
+							<label>Title:</label>
+							<input class="form-control input-sm" id="titleReadonly" name="titleReadonly" type="text" readonly="readonly"/>
+						</div>
+						<div class="col-md-2 col-md-offset-1 col-lg-3">
+							<label>Description:</label>
+							<textarea class="form-control input-sm" rows="3" id="descriptionReadonly" name="descriptionReadonly" readonly="readonly"></textarea>
+						</div>
+						<div class="col-md-2 col-md-offset-1 col-lg-3">
+							<div class="searchTask" hidden="true">
+								<label>Origination</label>
+								<input class="form-control" id="orginationReadonly" name="orginationReadonly" type="text" readonly="readonly">
+							</div>
+							<div class="workTask" hidden="true">
+								<label>Nature</label>
+								<input class="form-control" id="natureReadonly" name="natureReadonly" type="text" readonly="readonly">
+							</div>
+						</div>	
+					</div>
+					<div class="row">
+						<div class="col-md-2 col-lg-3">
+							<label>Finished:</label>
+							<input class="form-control" type="checkbox" id="finishedReadonly" name="finishedReadonly" disabled="disabled"/>
+						</div>
+						<div class="col-md-2 col-md-offset-1 col-lg-3">
+							<label>Priority:</label>
+							<input class="form-control input-sm" id="priorityReadonly" name="priorityReadonly" type="text" readonly="readonly">
+						</div>
+	    				<div class="col-md-2 col-md-offset-1 col-lg-3">
+							<div class="searchTask" hidden="true">
+								<label>Type:</label>
+								<input class="form-control" id="typeReadonly" name="typeReadonly" type="text" readonly="readonly">
+							</div>
+							<div class="workTask" hidden="true">
+								<label>Stage:</label>
+								<input class="form-control" id="stageReadonly" name="stageReadonly" type="text" readonly="readonly">
+							</div>
+						</div>
+	    			</div>
+	    			<div class="row">
+						<div class="col-md-2 col-lg-3">
+	    					<label>Start Date:</label>
+							<input class="form-control input-sm" id="startDateReadonly" name="startDateReadonly" type="text" readonly="readonly">
+						</div>
+						<div class="col-md-2 col-md-offset-1 col-lg-3">
+							<label>End Date:</label>
+							<input class="form-control input-sm" id="endDateReadonly" name="endDateReadonly" type="text" readonly="readonly">
+						</div>
+						<div class="col-md-2 col-md-offset-1 col-lg-3">
+							<div class="searchTask" hidden="true">
+								<label>Flexibility:</label>
+								<input class="form-control" id="flexibilityReadonly" name="flexibilityReadonly" type="text" readonly="readonly">
+							</div>
+							<div class="workTask" hidden="true">
+								<label>Timeframe:</label>
+								<input class="form-control" id="timeframeReadonly" name="timeframeReadonly" type="text" readonly="readonly">
+							</div>
+						</div>	
+					</div>
+					
+					<!-- begin tablesection -->
+					<div class="row" style="padding-top: 4%">
+						<div class="col-md-3">
+							<label>Notes:
+								<a href="#noteModal" role="button" onclick="showCreateNoteModal()" id="addNoteButton" class="btn btn-xs" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i></a>
+							</label>
+							<table class="table table-condensed table-hover" id="noteTable">
+								<thead>
+									<tr>
+										<th>Title</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div><!-- col-md-3 -->
+						<div class="col-md-3 col-md-offset-1">
+							<label>Uploads:
+								<a href="#uploadModal" role="button" id="addUploadButton" class="btn btn-xs" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i></a>
+							</label>
+							<table class="table table-condensed table-hover" id="uploadTable">
+								<thead>
+									<tr>
+										<th>Title</th>
+										<th></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div><!-- col-md-3 -->
+						<div class="col-md-3 col-md-offset-1">
+							<label>Keywords:
+								<a href="#keywordModal" role="button" id="addKewordButton" class="btn btn-xs" data-toggle="modal"><i class="glyphicon glyphicon-plus"></i></a>
+							</label>
+							<table class="table table-condensed table-hover" id="keywordTable">
+								<thead>
+									<tr>
+										<th>Title</th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+						</div><!-- col-md-3 -->
+					</div><!-- row -->
+			</div><!-- hero -->
+		</div><!-- col-md- 9 -->
+		</div>	<!-- row -->
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-offset-9 col-md-3">
+					<div class="btn-group">
+						<button class="btn btn-primary btn-xs" id="createTaskButton" type="button" onclick="showCreateTaskModal();">Create Task</button>
+						<button class="btn btn-default btn-xs" id="updateTaskButton" type="button" onclick="showUpdateTaskModal();">Update Task</button>
+						<button class="btn btn-default btn-xs" id="deleteTaskButton" type="button" onclick="deleteTask();">Delete Task</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<hr>
+		<footer>
+			<p>
+			&copy; FernUniversität in Hagen
+			</p>
+		</footer>
+	</div><!-- container-->
+		
+		<!-- begin notesection -->
+		<div class="modal fade" id="noteModal">
+			<div class="modal-dialog">
+    			<div class="modal-content">
+				  <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				    <h3>Note</h3>
+				  </div>
+				  <div class="modal-body">
+			    	<label class="control-label" for="noteTitle">Title:</label>
+				    <input class="form-control" id="noteTitle" name="noteTitle" type="text" value=""/>
+				    <label class="control-label" for="noteDetail">Detail:</label>
+				    <textarea class="form-control" rows="3" id="noteDetail"></textarea>
+				    <input type="hidden" id="noteUpdateId"/>
+		   			<input type="hidden" id="noteUpdateTablePos">
+				  </div>
+				  <div class="modal-footer">
+					  <div class="btn-group">
+					    <button class="btn btn-default btn-xs" data-dismiss="modal" aria-hidden="true">Cancel</button>
+						<button class="btn btn-primary btn-xs" id="createNoteButton" data-dismiss="modal" onclick="createNote();">Add Note</button>
+					  	<button class="btn btn-primary btn-xs" id="updateNoteButton" data-dismiss="modal" onclick="updateNote();">Update Note</button>
+		  			  </div>
+				  </div>
+				</div>
+			</div>
+		</div>
+		<!-- end notesection -->
+				
+		<!-- begin uploadsection -->
+			
+		<div class="modal fade" id="uploadModal">
+			<div class="modal-dialog">
+    			<div class="modal-content">
+					  <div class="modal-header">
+					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					    <h3>Upload</h3>
+					  </div>
+					  <div class="modal-body">
+				    	<label class="control-label" for="uploadTitle">Title:</label>
+					    <input class="form-control" id="uploadTitle" name="uploadTitle" type="text" value=""/>
+					   <!-- TODO: file selection pos. -->
+					    <label class="control-label" for="fileUploader">File:</label>
+					    <font size="2">
+					    	<input id="fileUploader" name="fileUploader" type="file"/>
+					     </font>
+					  </div>
+					  <div class="modal-footer">
+					  	<div class="btn-group">
+						    <button class="btn btn-default btn-xs" data-dismiss="modal" aria-hidden="true">Cancel</button>
+							<button type="submit" class="btn btn-primary btn-xs" data-dismiss="modal" onclick="uploadFile();">Upload File</button>
+					  	</div>
+					  </div>
+				</div>
+			</div>
+		</div>
+		<!-- end uploadsection -->
+		
+		<!-- start keywordsection -->
+		<div class="modal fade" id="keywordModal">
+			<div class="modal-dialog">
+    			<div class="modal-content">
+					<div class="modal-header">
+					    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					    <h3>Keyword</h3>
+					 </div>
+					 <div class="modal-body">
+				    	<label class="control-label" for="keywordValue">Keyword:</label>
+					    <input class="form-control" id="keywordValue" name="keywordValue" type="text" value=""/>
+					 </div>
+					 <div class="modal-footer">
+					 	<div class="btn-group">
+						    <button class="btn btn-default btn-xs" data-dismiss="modal" aria-hidden="true">Cancel</button>
+							<button type="submit" class="btn btn-primary btn-xs" data-dismiss="modal" onclick="createKeyword();">Add Keyword</button>
+					 	</div>
+					 </div>
+				</div>
+			</div>
+		</div>
+		<!-- end keywordsection -->
+			
+		<!-- Modal -->
+		<div id="modalTask" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+	    		<div class="modal-content">
+				  <div class="modal-header">
+				    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				    <h3 id="myModalLabel">Task Editing</h3>
+				  </div>
+				  <div class="modal-body">
+				  	<div class="control-group">
+						<!-- 
+						<label class="control-label" for="task-title">Tasktype:</label>
+						<label class="radio inline">
+						  	<input type="radio" name="taskType" id="taskGroup" value="TASKGROUP" onclick="handleFormType('TASKGROUP');">Taskgroup
+						</label>
+						<label class="radio inline"> 	
+						  	<input type="radio" name="taskType" id="workTask" value="WORKTASK" onclick="handleFormType('WORKTASK');">WorkTask
+						</label>
+						
+						<label class="radio inline">
+						  	<input type="radio" name="taskType" id="searchTask" value="SEARCHTASK" onclick="handleFormType('SEARCHTASK');">SearchTask
+						</label>
+						-->	
+						<label class="control-label" for="task-title">Title:</label>
+						<div class="controls">	
+							<input class="form-control" id="title" name="title" type="text" />
+						</div>
+						
+						<label class="control-label" for="task-title">Description:</label>
+						<div class="controls">	
+							<textarea class="form-control" id="description" name="description"></textarea>
+						</div>
+							
+						<label class="control-label" for="task-title">Finished:</label>
+						<label class="checkbox inline">	
+							<input type="checkbox" id="finished" name="finished"/>
+						 </label>
+		    				
+						<div id="taskSection">
+		   					<label class="control-label" for="startDate">Start Date:</label>
+		   					<div class="controls">
+								<input class="form-control" id="startDate" name="startDate" type="text" data-date-format="dd/mm/yyyy">
+							</div>
+							<label class="control-label" for="endDate">End Date:</label>
+							<div class="controls">
+								<input class="form-control" id="endDate" name="endDate" type="text" data-date-format="dd/mm/yyyy">
+							</div>
+							
+							<label class="control-label" for="task-title">Priority:</label>
+							<select id="priority" class="form-control" name="priority"> 
+								<option value="LOW">Low</option>
+								<option value="MEDIUM">Medium</option>
+								<option value="HIGH">High</option>
+								<option value="URGENT">Urgent</option>
+							</select>
+						</div>
+						<!-- 
+						<div id="workTaskSection" hidden="true">
+							<label class="control-label" for="task-title">Nature</label>
+							<div class="controls">
+								<input class="form-control" id="nature" name="nature" type="text">
+							</div>
+							<label class="control-label" for="task-title">Stage:</label>
+							<div class="controls">		
+								<input class="form-control" id="stage" name="stage" type="text">
+							</div>
+							<label class="control-label" for="task-title">Timeframe:</label>
+							<div class="controls">
+								<input class="form-control" id="timeframe" name="timeframe" type="text">
+							</div>
+						</div>	
+						 
+						<div id="searchTaskSection" hidden="true">
+							<label class="control-label" for="task-title">Orgination</label>
+							<div class="controls">
+								<input class="form-control" id="orgination" name="orgination" type="text">
+							</div>
+							<label class="control-label" for="task-title">Type:</label>
+							<div class="controls">	
+								<input class="form-control" id="type" name="type" type="text">
+							</div>
+							<label class="control-label" for="task-title">Flexibility:</label>
+							<div class="controls">
+								<input class="form-control" id="flexibility" name="flexibility" type="text">
+							</div>
+						</div>
+						 -->
+				  </div>
+				  <div class="modal-footer">
+					  <div class="btn-group">
+					    <button class="btn btn-default btn-xs" data-dismiss="modal" onclick="closeTaskModal();">Close</button>
+					    <button class="btn btn-primary btn-xs" id="modalUpdateTaskButton" data-dismiss="modal" onclick="updateTask();">Update Task</button>
+					    <button class="btn btn-primary btn-xs" id="modalCreateTaskButton" data-dismiss="modal" onclick="createTask();">Create Task</button>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End modal -->
+	<!-- Modal Searchhistory -->
+	<div id="modalSearchHistory" class="modal fade">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">Search</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="col-lg-6">
+			    <div class="input-group">
+			      <input type="text" class="form-control">
+			      <span class="input-group-btn">
+			        <button class="btn btn-default" type="button" onclick="search();">Search</button>
+			      </span>
+			    </div><!-- /input-group -->
+		  	</div>
+	      	<ul id="historyList" class="list-group"></ul>
+		  </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary btn-xs" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+	<!-- Modal taskcontextsearch -->
+	<div id="modalTaskcontextSearch" class="modal fade">
+	  <div class="modal-dialog" style="width: 80%; height: 90%">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h4 class="modal-title">Taskcontext search</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="container" style="padding-top: 1%">
+			    <div class="form-group">
+			    	<input type="text" class="form-control" id="taskcontextInput" placeholder="searchterm"/>
+			 	</div>
+				<button class="btn btn-primary btn-xs" id="searchButton" onclick="searchTaskContext();">Search</button>
+				
+				
+				<div class="tabcontainer" role="tabpanel" style="padding-top: 1%">
+					<ul id="resultTabs" class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active">
+							<a href="#initialResultTab" role="tab" data-toggle="tab">Initial Result</a>
+						</li>
+						<li role="presentation">
+							<a href="#rankedResultTab" role="tab" data-toggle="tab">Ranked Result</a>
+						</li>
+					</ul>	
+					<div id="resultTabs" class="tab-content">
+						<div class="tab-pane active" id="initialResultTab">
+							<div class="container" style="padding-top: 1%">
+								<div class="row">
+									<label>Initial Result</label>
+									<table class="table table-condensed table-striped" id="primarySearchTable">
+									</table>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane" id="rankedResultTab">
+							<div class="container" style="padding-top: 1%">
+							<div class="row">
+								<label>Ranked Result</label>
+								<table class="table table-condensed table-striped" id="contextSearchTable">
+								</table>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+	      
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-primary btn-xs" data-dismiss="modal">Close</button>
+	      </div>
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+	
+</body>
+</html>

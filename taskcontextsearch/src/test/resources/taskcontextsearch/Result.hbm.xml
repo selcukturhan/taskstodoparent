@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="taskcontextsearch">
+	<class name="Result">
+		<id name="id" type="long">
+			<generator class="native" />
+		</id>
+
+		<discriminator column="RESULT_TYPE" type="string" />
+		<property name="snippet" type="string"/>
+		<property name="searchContext" type="string"/>
+		<property name="rank" type="int"/>
+		
+		<subclass name="InitialResult" discriminator-value="IR">
+		</subclass>
+		<subclass name="RankedResult" discriminator-value="IR">
+		</subclass>
+	</class>
+</hibernate-mapping>

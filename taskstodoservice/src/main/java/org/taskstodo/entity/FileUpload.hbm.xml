@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.taskstodo.entity">
+
+  <class name="FileUpload">
+		<id name="fileUploadId" type="long">
+			<generator class="native"/>
+		</id>
+		
+		<property name="title" 			type="string"/>
+		<property name="description" 	type="string"/>
+		<property name="uri" 			type="string"/>
+	
+		<property name="creationDate" 	type="timestamp"/>
+		
+		<many-to-one name="task" class="Task" column="taskId" not-null="true"/>
+	</class>
+</hibernate-mapping>
