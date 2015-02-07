@@ -17,12 +17,9 @@ import taskcontextsearch.search.ISearchEngineService;
 
 import com.google.api.services.customsearch.model.Result;
 
-/**
- * Created by regulator on 9/5/14.
- */
 @Service(value = "RankingService")
-@Transactional
 public class RankingService implements IRankingService {
+
 	@Autowired
 	private ISearchEngineService searchEngineService;
 	@Autowired
@@ -42,14 +39,16 @@ public class RankingService implements IRankingService {
 	 */
 	@Override
 	public TaskContextSearchResultTO getSearchResultForTerm(final String term, final Task currentTask) {
-		List<Result> results = searchEngineService.doSearch(term);
-		
-		TaskContextSearchResultTO contextSearchResult = new TaskContextSearchResultTO();
-		for (Result result : results) {
-			contextSearchResult.getPrimaryResult().add(new ResultTO(result.getSnippet(), result.getLink()));
-		}
-		if (results != null && !results.isEmpty()) {
-			List<Document> documents = rankingEngine.rank(currentTask, results);
+
+		final TaskContextSearchResultTO contextSearchResult = new TaskContextSearchResultTO();
+		final List<Result> results = searchEngineService.doSearch(term);
+
+		if(results != null && !results.isEmpty()){
+
+			for (Result result : results) {
+				contextSearchResult.getPrimaryResult().add(new ResultTO(result.getSnippet(), result.getLink()));
+			}
+			final List<Document> documents = rankingEngine.rank(currentTask, results);
 			for (Document document : documents) {
 				contextSearchResult.getRankedResult().add(new ResultTO(document.get("snippet"),document.get("url")));
 			}

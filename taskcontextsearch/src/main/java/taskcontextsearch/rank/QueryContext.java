@@ -1,21 +1,17 @@
 package taskcontextsearch.rank;
 
-/**
- * Created by regulator on 9/3/14.
- */
 public final class QueryContext {
     private final String field;
     private final String text;
     private final float boost;
     private QueryContext parent;
 
-    public QueryContext(final String field, final String text, final float boost) {
-        this.field = field;
-        this.text = text;
-        this.boost = boost;
+
+    public static QueryContext newInstance(final String field, final String text, final float boost, final QueryContext parent){
+        return new QueryContext(field, text, boost, parent);
     }
 
-    public QueryContext(String field, String text, float boost, QueryContext parent) {
+    private QueryContext(final String field, final String text, final float boost, final QueryContext parent) {
         this.field = field;
         this.text = text;
         this.boost = boost;
@@ -24,7 +20,6 @@ public final class QueryContext {
 
     public String getField() {
         return field;
-
     }
 
     public QueryContext getParent() {

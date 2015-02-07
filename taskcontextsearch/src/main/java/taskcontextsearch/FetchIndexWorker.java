@@ -1,13 +1,5 @@
 package taskcontextsearch;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.net.URLConnection;
-import java.util.concurrent.Callable;
-
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.StoredField;
 import org.apache.lucene.document.TextField;
@@ -16,8 +8,19 @@ import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
-public class FetchIndexWorker implements Callable<Document>{
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.concurrent.Callable;
+
+public final class FetchIndexWorker implements Callable<Document>{
+
+	public static final Logger logger = LoggerFactory.getLogger(FetchIndexWorker.class);
+
 
 	private String url;
 	private String snippet;
@@ -41,26 +44,20 @@ public class FetchIndexWorker implements Callable<Document>{
 		    parser.parse(inputStream, handler, metadata, new ParseContext());
 		    String plainText = handler.toString();
 		    plainText = plainText.replaceAll("\t+"," ").replaceAll("\n+"," ").replaceAll(" +"," ");
-//		    System.out.println(new LanguageIdentifier(plainText).getLanguage() + " " + url);
 		    document.add(new TextField("content", plainText	, org.apache.lucene.document.Field.Store.NO));
 			document.add(new StoredField("url" , url));
 			document.add(new StoredField("snippet", snippet));
-			System.out.println(url);
+			logger.info(url);
 			 
-		} catch (MalformedURLException mue) {
-			System.out.println(mue);
-		} catch (FileNotFoundException fnfe) {
-			System.out.println(fnfe);
-		} catch (IOException ioe) {
-			System.out.println(ioe);
 		} catch (Exception e) {
-			System.out.println(e);
+			logger.error("Error during page harvesting: " + e.getLocalizedMessage());
+			throw new RuntimeException("Error during page harvesting: ", e);
 		} finally {
 			if(inputStream != null){
 				try {
 					inputStream.close();
 				} catch (IOException e) {
-					System.out.println(e);
+					logger.error("Error during ressourcerelease: " + e.getLocalizedMessage());
 				}
 			}
 		}

@@ -3,6 +3,8 @@ package taskcontextsearch.search;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
@@ -16,13 +18,13 @@ import com.google.api.services.customsearch.model.Search;
 @Primary
 @Service(value = "GoogleSearchService")
 public class GoogleSearchService implements ISearchEngineService {
- 
+
+    public static final Logger logger = LoggerFactory.getLogger(GoogleSearchService.class);
     //api key
     final private String API_KEY = "AIzaSyDIE9K-9OVpQUPkLRAB1YjJ0neHfNSG9tM";
     //custom search engine ID
     final private String SEARCH_ENGINE_ID = "003281050901061570646:jfufua7gj3a";
 
-    //TODO: config-params for resultsize
     /* (non-Javadoc)
 	 * @see org.taskstodo.dao.SearchService#doSearch(java.lang.String)
 	 */
@@ -32,7 +34,7 @@ public class GoogleSearchService implements ISearchEngineService {
         JsonFactory jsonFactory = new JacksonFactory();
         Customsearch customsearch = new Customsearch(httpTransport, jsonFactory, null);
         List<Result> resultList = new ArrayList<Result>();
-        Customsearch.Cse.List list = null;
+        Customsearch.Cse.List list;
         try {
             list = customsearch.cse().list(searchTerm);
             list.setKey(API_KEY);
@@ -46,13 +48,11 @@ public class GoogleSearchService implements ISearchEngineService {
             }
             
             for (Result result : resultList) {
-				System.out.println(result.getSnippet());
+                logger.info(result.getSnippet());
 			}
         }catch (Exception e){
-            System.out.println(e);
+           logger.error("Error during googlesearch: " + e.getLocalizedMessage());
         }
-
-        //TODO: check emptylist approach
         return resultList;
     }
  }
