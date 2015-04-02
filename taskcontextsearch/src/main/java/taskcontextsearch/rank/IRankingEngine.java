@@ -8,5 +8,5 @@ import org.taskstodo.entity.Task;
 import com.google.api.services.customsearch.model.Result;
 
 public interface IRankingEngine {
-	public List<Document> rank(final Task currentTask, final List<Result> searchResults);
+    List<Document> rank(final Task currentTask, final List<Result> searchResults);
 }

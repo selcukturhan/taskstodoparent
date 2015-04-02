@@ -25,16 +25,13 @@ public class GoogleSearchService implements ISearchEngineService {
     //custom search engine ID
     final private String SEARCH_ENGINE_ID = "003281050901061570646:jfufua7gj3a";
 
-    /* (non-Javadoc)
-	 * @see org.taskstodo.dao.SearchService#doSearch(java.lang.String)
-	 */
     @Override
 	public List<Result> doSearch(final String searchTerm) {
-        HttpTransport httpTransport = new NetHttpTransport();
-        JsonFactory jsonFactory = new JacksonFactory();
-        Customsearch customsearch = new Customsearch(httpTransport, jsonFactory, null);
-        List<Result> resultList = new ArrayList<Result>();
-        Customsearch.Cse.List list;
+        final HttpTransport httpTransport = new NetHttpTransport();
+        final JsonFactory jsonFactory = new JacksonFactory();
+        final Customsearch customsearch = new Customsearch(httpTransport, jsonFactory, null);
+        final List<Result> resultList = new ArrayList<Result>();
+        final Customsearch.Cse.List list;
         try {
             list = customsearch.cse().list(searchTerm);
             list.setKey(API_KEY);
@@ -46,10 +43,9 @@ public class GoogleSearchService implements ISearchEngineService {
                 Search results = list.execute();
                 resultList.addAll(results.getItems());
             }
-            
-            for (Result result : resultList) {
-                logger.info(result.getSnippet());
-			}
+
+            resultList.forEach(result -> logger.info(result.getSnippet()));
+
         }catch (Exception e){
            logger.error("Error during googlesearch: " + e.getLocalizedMessage());
         }

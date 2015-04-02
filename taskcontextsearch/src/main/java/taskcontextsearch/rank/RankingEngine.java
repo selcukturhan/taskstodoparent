@@ -10,17 +10,16 @@ import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.TopDocs;
-import org.apache.lucene.search.similarities.DefaultSimilarity;
 import org.apache.lucene.search.similarities.TFIDFSimilarity;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.store.SimpleFSDirectory;
-import org.apache.lucene.util.Version;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 import org.taskstodo.entity.Task;
 import taskcontextsearch.FetchIndexWorker;
 
@@ -30,7 +29,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.concurrent.Future;
-//TODO: refactor class in several others
+
+
 @Service(value = "RankingEngine")
 public class RankingEngine implements IRankingEngine {
 
@@ -42,26 +42,30 @@ public class RankingEngine implements IRankingEngine {
     @Autowired
     private IWeightingStrategy weightingStrategy;
 
+    private TFIDFSimilarity tfidfSimilarity;
+
+    private StandardAnalyzer standardAnalyzer;
+
+    private IndexWriterConfig indexWriterConfig;
+
+    private String sink = "/Users/selcukturhan/Desktop";
+
+    private int CHUNK_SIZE = 20;
+
     // TODO: simil. options
     @Override
     public List<Document> rank(final Task currentTask, final List<Result> searchResults) {
-
-        //transform searchResult => tf-idf/BM25
-
-//        BM25Similarity bm25similarity = new BM25Similarity();
-        final TFIDFSimilarity tfidfSimilarity = new DefaultSimilarity();
+        Assert.notNull(searchResults);
+        Assert.notEmpty(searchResults);
         final Directory ramDirectory = new RAMDirectory();
 
         try {
-
             //LOAD
-            final Collection<Callable<Document>> preparedDocuments = new ArrayList<Callable<Document>>();
+            final Collection<Callable<Document>> preparedDocuments = new ArrayList<>();
+            searchResults.forEach(result ->
+                    preparedDocuments.add(new FetchIndexWorker(result.getLink(), result.getSnippet())
+                    ));
 
-            for (Result result : searchResults) {
-                final String url = result.getLink();
-                final String snippet = result.getSnippet();
-                preparedDocuments.add(new FetchIndexWorker(url, snippet));
-            }
 
             final List<Future<Document>> result = new ArrayList<>(preparedDocuments.size());
             preparedDocuments.
@@ -69,58 +73,37 @@ public class RankingEngine implements IRankingEngine {
                             document -> result.add(taskExecutor.submit(document))
                     );
 
-            final StandardAnalyzer standardanalyzer = new StandardAnalyzer(Version.LUCENE_4_9);
-            final IndexWriterConfig indexwriterconfig = new IndexWriterConfig(Version.LUCENE_4_9, standardanalyzer);
-            indexwriterconfig.setSimilarity(tfidfSimilarity);
 
-            final IndexWriter indexwriter = new IndexWriter(ramDirectory, indexwriterconfig);
-
-            for (Future<Document> document : result) {
-                indexwriter.addDocument(document.get());
-            }
-            indexwriter.close();
-
-            //TODO: optimize(fire & forget) + dest
-            new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        final IndexWriterConfig indexFilewriterConfig = new IndexWriterConfig(Version.LUCENE_4_9, standardanalyzer);
-                        indexFilewriterConfig.setSimilarity(tfidfSimilarity);
-                        final Directory fileDirectory = new SimpleFSDirectory(new File("/home/ninja/index/" + new SimpleDateFormat("hhmm_ddMMyyyy").format(new Date())));
-                        final IndexWriter indexwriter = new IndexWriter(fileDirectory, indexFilewriterConfig);
-                        for (Future<Document> document : result) {
-                            indexwriter.addDocument(document.get());
-                        }
-                        indexwriter.close();
-                    } catch (Exception e) {
-                        logger.error("Error during indexwriting: " + e.getLocalizedMessage());
-                    }
-
+            final IndexWriter indexwriter = new IndexWriter(ramDirectory, indexWriterConfig);
+            result.forEach(document -> {
+                try {
+                    indexwriter.addDocument(document.get());
+                } catch (Exception e) {
+                    logger.error("Error during indexing: " + e.getLocalizedMessage());
+                    throw new RuntimeException();
                 }
-            }).run();
-
+            });
+            indexwriter.close();
+            persistIndex(result);
 
             final IndexReader indexReader = DirectoryReader.open(ramDirectory);
-            final int num = indexReader.numDocs();
-            for (int i = 0; i < num; i++) {
+            for (int i = 0; i < indexReader.numDocs(); i++) {
                 Document d = indexReader.document(i);
                 logger.info("d=" + d);
             }
-
             indexReader.close();
 
             final QueryContext queryContext = weightingStrategy.computeWeighting(currentTask);
             final Query reRankQuery = new QueryBuilder().buildQuery(queryContext);
 
-            final IndexSearcher indexsearcher = new IndexSearcher(DirectoryReader.open(ramDirectory));
-            indexsearcher.setSimilarity(tfidfSimilarity);
-            final TopDocs topdocs = getResults(indexsearcher, reRankQuery, 20);
+            final IndexSearcher indexSearcher = new IndexSearcher(DirectoryReader.open(ramDirectory));
+            indexSearcher.setSimilarity(tfidfSimilarity);
+            final TopDocs topdocs = getResults(indexSearcher, reRankQuery, CHUNK_SIZE);
             List<Document> documents = Collections.emptyList();
             if (topdocs != null) {
                 documents = new ArrayList<>();
                 for (int j = 0; j < topdocs.scoreDocs.length; j++) {
-                    Document document = indexsearcher.doc(topdocs.scoreDocs[j].doc);
+                    Document document = indexSearcher.doc(topdocs.scoreDocs[j].doc);
                     documents.add(document);
                 }
             }
@@ -131,9 +114,32 @@ public class RankingEngine implements IRankingEngine {
         }
     }
 
+    private void persistIndex(final List<Future<Document>> result) {
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    indexWriterConfig.setSimilarity(tfidfSimilarity);
+                    final Directory fileDirectory = new SimpleFSDirectory(new File(sink + new SimpleDateFormat("hhmm_ddMMyyyy").format(new Date())));
+                    final IndexWriter indexwriter = new IndexWriter(fileDirectory, indexWriterConfig);
+                    result.forEach(document -> {
+                        try {
+                            indexwriter.addDocument(document.get());
+                        } catch (Exception e) {
+                            logger.error("Error during indexwriting: " + e.getLocalizedMessage());
+                        }
+                    });
+                    indexwriter.close();
+                } catch (Exception e) {
+                    logger.error("Error during indexwriting: " + e.getLocalizedMessage());
+                }
 
-    private TopDocs getResults(final IndexSearcher indexsearcher, final Query query, final int i)
+            }
+        }).run();
+    }
+
+    private TopDocs getResults(final IndexSearcher indexsearcher, final Query query, final int chunkSize)
             throws IOException {
-        return indexsearcher.search(query, i);
+        return indexsearcher.search(query, chunkSize);
     }
 }

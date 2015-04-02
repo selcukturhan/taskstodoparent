@@ -5,6 +5,6 @@ import org.taskstodo.to.TaskContextSearchResultTO;
 
 public interface IRankingService {
 
-	public abstract TaskContextSearchResultTO getSearchResultForTerm(final String term, final Task currentTask);
+	TaskContextSearchResultTO getSearchResultForTerm(final String term, final Task currentTask);
 
 }

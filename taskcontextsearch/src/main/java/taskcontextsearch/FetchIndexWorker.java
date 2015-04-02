@@ -20,11 +20,12 @@ import java.util.concurrent.Callable;
 public final class FetchIndexWorker implements Callable<Document>{
 
 	public static final Logger logger = LoggerFactory.getLogger(FetchIndexWorker.class);
+	private final String url;
+	private final String snippet;
+	private final String requestUserAgentKey = "User-Agent";
+	private final String requestUserAgent = "Mozila/5.0 (Windows) NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0";
+	private final int WRITE_LIMIT = 10000000;
 
-
-	private String url;
-	private String snippet;
-	
 	public FetchIndexWorker(final String url, final String snippet) {
 		this.url = url;
 		this.snippet = snippet;
@@ -32,23 +33,22 @@ public final class FetchIndexWorker implements Callable<Document>{
 	@Override
 	public Document call() throws Exception {
 		InputStream inputStream = null;
-		Document document = new Document();
+		final Document document = new Document();
 		try {
 			URLConnection urlConnection = new URL(url).openConnection();
-			urlConnection.
-				addRequestProperty("User-Agent", "Mozila/5.0 (Windows) NT 6.1; WOW64; rv:25.0) Gecko/20100101 Firefox/25.0");
+			urlConnection.addRequestProperty(requestUserAgentKey, requestUserAgent);
 			inputStream = urlConnection.getInputStream();
-			Parser parser = new AutoDetectParser();
-			BodyContentHandler handler = new BodyContentHandler(10000000);
-		    Metadata metadata = new Metadata();
+			final Parser parser = new AutoDetectParser();
+			final BodyContentHandler handler = new BodyContentHandler(WRITE_LIMIT);
+		    final Metadata metadata = new Metadata();
 		    parser.parse(inputStream, handler, metadata, new ParseContext());
 		    String plainText = handler.toString();
 		    plainText = plainText.replaceAll("\t+"," ").replaceAll("\n+"," ").replaceAll(" +"," ");
+
 		    document.add(new TextField("content", plainText	, org.apache.lucene.document.Field.Store.NO));
 			document.add(new StoredField("url" , url));
 			document.add(new StoredField("snippet", snippet));
 			logger.info(url);
-			 
 		} catch (Exception e) {
 			logger.error("Error during page harvesting: " + e.getLocalizedMessage());
 			throw new RuntimeException("Error during page harvesting: ", e);
@@ -57,7 +57,7 @@ public final class FetchIndexWorker implements Callable<Document>{
 				try {
 					inputStream.close();
 				} catch (IOException e) {
-					logger.error("Error during ressourcerelease: " + e.getLocalizedMessage());
+					logger.error("Error during ressourcereleasing: " + e.getLocalizedMessage());
 				}
 			}
 		}

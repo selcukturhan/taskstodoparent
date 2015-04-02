@@ -7,7 +7,7 @@ public final class QueryContext {
     private QueryContext parent;
 
 
-    public static QueryContext newInstance(final String field, final String text, final float boost, final QueryContext parent){
+    public static QueryContext newInstance(final String field, final String text, final float boost, final QueryContext parent) {
         return new QueryContext(field, text, boost, parent);
     }
 
