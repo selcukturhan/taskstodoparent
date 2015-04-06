@@ -14,9 +14,11 @@ import org.apache.lucene.search.similarities.TFIDFSimilarity;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.RAMDirectory;
 import org.apache.lucene.store.SimpleFSDirectory;
+import org.apache.lucene.util.Version;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
@@ -42,15 +44,17 @@ public class RankingEngine implements IRankingEngine {
     @Autowired
     private IWeightingStrategy weightingStrategy;
 
+    @Autowired
     private TFIDFSimilarity tfidfSimilarity;
 
+    @Autowired
     private StandardAnalyzer standardAnalyzer;
 
-    private IndexWriterConfig indexWriterConfig;
+    @Value("${sink}")
+    private String sink;
 
-    private String sink = "/Users/selcukturhan/Desktop";
-
-    private int CHUNK_SIZE = 20;
+    @Value("${chunkSize}")
+    private int chunkSize;
 
     // TODO: simil. options
     @Override
@@ -73,7 +77,7 @@ public class RankingEngine implements IRankingEngine {
                             document -> result.add(taskExecutor.submit(document))
                     );
 
-
+            final IndexWriterConfig indexWriterConfig = new IndexWriterConfig(Version.LUCENE_4_9, standardAnalyzer);
             final IndexWriter indexwriter = new IndexWriter(ramDirectory, indexWriterConfig);
             result.forEach(document -> {
                 try {
@@ -98,7 +102,7 @@ public class RankingEngine implements IRankingEngine {
 
             final IndexSearcher indexSearcher = new IndexSearcher(DirectoryReader.open(ramDirectory));
             indexSearcher.setSimilarity(tfidfSimilarity);
-            final TopDocs topdocs = getResults(indexSearcher, reRankQuery, CHUNK_SIZE);
+            final TopDocs topdocs = getResults(indexSearcher, reRankQuery, chunkSize);
             List<Document> documents = Collections.emptyList();
             if (topdocs != null) {
                 documents = new ArrayList<>();
@@ -115,26 +119,24 @@ public class RankingEngine implements IRankingEngine {
     }
 
     private void persistIndex(final List<Future<Document>> result) {
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    indexWriterConfig.setSimilarity(tfidfSimilarity);
-                    final Directory fileDirectory = new SimpleFSDirectory(new File(sink + new SimpleDateFormat("hhmm_ddMMyyyy").format(new Date())));
-                    final IndexWriter indexwriter = new IndexWriter(fileDirectory, indexWriterConfig);
-                    result.forEach(document -> {
-                        try {
-                            indexwriter.addDocument(document.get());
-                        } catch (Exception e) {
-                            logger.error("Error during indexwriting: " + e.getLocalizedMessage());
-                        }
-                    });
-                    indexwriter.close();
-                } catch (Exception e) {
-                    logger.error("Error during indexwriting: " + e.getLocalizedMessage());
-                }
-
+        new Thread(() -> {
+            try {
+                final IndexWriterConfig indexWriterConfig = new IndexWriterConfig(Version.LUCENE_4_9, standardAnalyzer);
+                indexWriterConfig.setSimilarity(tfidfSimilarity);
+                final Directory fileDirectory = new SimpleFSDirectory(new File(sink + new SimpleDateFormat("hhmm_ddMMyyyy").format(new Date())));
+                final IndexWriter indexwriter = new IndexWriter(fileDirectory, indexWriterConfig);
+                result.forEach(document -> {
+                    try {
+                        indexwriter.addDocument(document.get());
+                    } catch (Exception e) {
+                        logger.error("Error during indexwriting: " + e.getLocalizedMessage());
+                    }
+                });
+                indexwriter.close();
+            } catch (Exception e) {
+                logger.error("Error during indexwriting: " + e.getLocalizedMessage());
             }
+
         }).run();
     }
 

@@ -7,9 +7,13 @@ import org.apache.lucene.search.similarities.DefaultSimilarity;
 import org.apache.lucene.util.Version;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
+import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 
 @Configuration
+@PropertySource("classpath:application.properties")
 public class ApplicationConfig {
     @Bean
     public DefaultSimilarity tfidfSimilarity(){
@@ -27,16 +31,16 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public IndexWriterConfig indexwriterconfig(){
-        return new IndexWriterConfig(Version.LUCENE_4_9, standardanalyzer());
-    }
-
-    @Bean
     public ThreadPoolTaskExecutor taskExecutor(){
         final ThreadPoolTaskExecutor threadPoolTaskExecutor = new ThreadPoolTaskExecutor();
         threadPoolTaskExecutor.setCorePoolSize(20);
         threadPoolTaskExecutor.setMaxPoolSize(40);
         threadPoolTaskExecutor.setWaitForTasksToCompleteOnShutdown(true);
         return threadPoolTaskExecutor;
+    }
+
+    @Bean
+    public static PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer() {
+        return new PropertySourcesPlaceholderConfigurer();
     }
 }
