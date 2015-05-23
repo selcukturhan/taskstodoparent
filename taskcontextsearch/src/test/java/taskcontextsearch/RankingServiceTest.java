@@ -49,7 +49,7 @@ public class RankingServiceTest {
 	//
 	// @Autowired
 	// SessionFactory sessionFactory;
-
+/*
 	@Test
 	 @Ignore
 	public void testThreadingConnect() throws InterruptedException,
@@ -146,7 +146,7 @@ public class RankingServiceTest {
 
 	    return termIdMap;
 	}
-
+*/
 	@Test
 	@Ignore
 	public void testHtmlParserConnect() {

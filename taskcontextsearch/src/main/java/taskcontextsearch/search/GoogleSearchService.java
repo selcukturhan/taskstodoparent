@@ -1,6 +1,8 @@
 package taskcontextsearch.search;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import org.slf4j.Logger;
@@ -30,7 +32,7 @@ public class GoogleSearchService implements ISearchEngineService {
         final HttpTransport httpTransport = new NetHttpTransport();
         final JsonFactory jsonFactory = new JacksonFactory();
         final Customsearch customsearch = new Customsearch(httpTransport, jsonFactory, null);
-        final List<Result> resultList = new ArrayList<Result>();
+        final List<Result> resultList = new ArrayList<>();
         final Customsearch.Cse.List list;
         try {
             list = customsearch.cse().list(searchTerm);

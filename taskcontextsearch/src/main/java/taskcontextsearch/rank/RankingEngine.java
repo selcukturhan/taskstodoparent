@@ -1,10 +1,8 @@
 package taskcontextsearch.rank;
 
-import com.google.api.services.customsearch.model.Result;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
-import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.search.IndexSearcher;
@@ -19,27 +17,23 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Service;
 import org.springframework.util.Assert;
 import org.taskstodo.entity.Task;
-import taskcontextsearch.FetchIndexWorker;
 
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.concurrent.Future;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
 
 
-@Service(value = "RankingEngine")
+@Service(value = "rankingEngine")
 public class RankingEngine implements IRankingEngine {
 
     public static final Logger logger = LoggerFactory.getLogger(RankingEngine.class);
-
-    @Autowired
-    private ThreadPoolTaskExecutor taskExecutor;
 
     @Autowired
     private IWeightingStrategy weightingStrategy;
@@ -58,45 +52,27 @@ public class RankingEngine implements IRankingEngine {
 
     // TODO: simil. options
     @Override
-    public List<Document> rank(final Task currentTask, final List<Result> searchResults) {
-        Assert.notNull(searchResults);
-        Assert.notEmpty(searchResults);
+    public List<Document> rank(final Task currentTask, final List<Document> originPageContent) {
+        Assert.notNull(originPageContent);
+        Assert.notEmpty(originPageContent);
         final Directory ramDirectory = new RAMDirectory();
-
         try {
-            //LOAD
-            final Collection<Callable<Document>> preparedDocuments = new ArrayList<>();
-            searchResults.forEach(result ->
-                    preparedDocuments.add(new FetchIndexWorker(result.getLink(), result.getSnippet())
-                    ));
 
-
-            final List<Future<Document>> result = new ArrayList<>(preparedDocuments.size());
-            preparedDocuments.
-                    forEach(
-                            document -> result.add(taskExecutor.submit(document))
-                    );
-
+            //#1: index the retrieved set of pagecontent
             final IndexWriterConfig indexWriterConfig = new IndexWriterConfig(Version.LUCENE_4_9, standardAnalyzer);
             final IndexWriter indexwriter = new IndexWriter(ramDirectory, indexWriterConfig);
-            result.forEach(document -> {
+            originPageContent.forEach(document -> {
                 try {
-                    indexwriter.addDocument(document.get());
+                    indexwriter.addDocument(document);
                 } catch (Exception e) {
                     logger.error("Error during indexing: " + e.getLocalizedMessage());
                     throw new RuntimeException();
                 }
             });
             indexwriter.close();
-            persistIndex(result);
+            persistIndex(originPageContent);
 
-            final IndexReader indexReader = DirectoryReader.open(ramDirectory);
-            for (int i = 0; i < indexReader.numDocs(); i++) {
-                Document d = indexReader.document(i);
-                logger.info("d=" + d);
-            }
-            indexReader.close();
-
+            //#2: start reranking based on taskcontextinformation
             final QueryContext queryContext = weightingStrategy.computeWeighting(currentTask);
             final Query reRankQuery = new QueryBuilder().buildQuery(queryContext);
 
@@ -118,7 +94,7 @@ public class RankingEngine implements IRankingEngine {
         }
     }
 
-    private void persistIndex(final List<Future<Document>> result) {
+    private void persistIndex(final List<Document> result) {
         new Thread(() -> {
             try {
                 final IndexWriterConfig indexWriterConfig = new IndexWriterConfig(Version.LUCENE_4_9, standardAnalyzer);
@@ -127,7 +103,7 @@ public class RankingEngine implements IRankingEngine {
                 final IndexWriter indexwriter = new IndexWriter(fileDirectory, indexWriterConfig);
                 result.forEach(document -> {
                     try {
-                        indexwriter.addDocument(document.get());
+                        indexwriter.addDocument(document);
                     } catch (Exception e) {
                         logger.error("Error during indexwriting: " + e.getLocalizedMessage());
                     }

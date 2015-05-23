@@ -35,7 +35,12 @@ public class TaskService extends AbstractService implements ITaskService {
     
     public TaskService() {}
 
-  
+    public TaskService(final ITaskDAO taskDAO) {
+        this.taskDAO = taskDAO;
+    }
+
+
+
     public List<TaskTO> findAll(){
         List<TaskTO> taskTOs = new ArrayList<TaskTO>();
         List<Task> tasks;

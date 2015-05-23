@@ -17,72 +17,87 @@ import org.taskstodo.service.ITaskService;
 import org.taskstodo.to.TaskTO;
 
 
-
-
 @Controller
 @RequestMapping("/task")
 public class TaskController {
-    
-  public static final Logger logger = LoggerFactory.getLogger(TaskController.class);
-  
-  @Autowired
-  private ITaskService taskService;
-  
-  @RequestMapping(	value="/findAll", 
-          			method=RequestMethod.GET,
-          			consumes="application/json",
-          			produces="application/json")
-  public @ResponseBody List<TaskTO> findAll(){
-     return taskService.findAll();
-  }
-  
-  @RequestMapping(	value="findByTaskId/{taskId}",
-		  			method=RequestMethod.GET,
-		  			consumes="application/json",
-		  			produces="application/json")
-  public @ResponseBody TaskTO findByTaskId(@PathVariable Long taskId){
-      return taskService.findByTaskId(taskId);
-  }
-  
-  @RequestMapping(  value="/createTask",
-		            method=RequestMethod.POST,
-		            consumes="application/json",
-		            produces="application/json"
-                    )
-  //TODO: solve null value problem, when Node is first created
- 
-  public @ResponseBody TaskTO create(@RequestBody TaskTO task){
-      return taskService.create(task);
-  }
-  
-  @RequestMapping(	value="/updateTask",
-		            method=RequestMethod.PUT,
-		            consumes="application/json",
-	          		produces="application/json"
-		            )
-  public @ResponseBody void update(@RequestBody TaskTO task){
-      taskService.update(task);
-  }
-  
-  @RequestMapping(	value="/reassignNode", 
-		            method=RequestMethod.PUT,
-	          		consumes="application/json",
-	          		produces="application/json"
-	          		)
-  public @ResponseBody void reassignNode(@RequestBody NodeCombination nodeCombination){
-      taskService.reassignNode(nodeCombination);
-  }
-  
-  @RequestMapping( value="/deleteByTaskId/{taskId}", 
-                   method=RequestMethod.DELETE,
-                   consumes="application/json",
-                   produces="application/json")
-  public @ResponseBody void delete(@PathVariable Long taskId){
-      taskService.delete(taskId);
-  }
-  
-  @ExceptionHandler(Exception.class)
-  private Exception handleException(Exception exception){
-      return exception;
-  }
+
+    public static final Logger logger = LoggerFactory.getLogger(TaskController.class);
+
+
+    @Autowired
+    public TaskController(final ITaskService taskService) {
+        this.taskService = taskService;
+    }
+
+    private ITaskService taskService;
+
+    @RequestMapping(value = "/findAll",
+            method = RequestMethod.GET,
+            consumes = "application/json",
+            produces = "application/json")
+    public
+    @ResponseBody
+    List<TaskTO> findAll() {
+        return taskService.findAll();
+    }
+
+    @RequestMapping(value = "findByTaskId/{taskId}",
+            method = RequestMethod.GET,
+            consumes = "application/json",
+            produces = "application/json")
+    public
+    @ResponseBody
+    TaskTO findByTaskId(@PathVariable Long taskId) {
+        return taskService.findByTaskId(taskId);
+    }
+
+    @RequestMapping(value = "/createTask",
+            method = RequestMethod.POST,
+            consumes = "application/json",
+            produces = "application/json"
+    )
+    //TODO: solve null value problem, when Node is first created
+
+    public
+    @ResponseBody
+    TaskTO create(@RequestBody TaskTO task) {
+        return taskService.create(task);
+    }
+
+    @RequestMapping(value = "/updateTask",
+            method = RequestMethod.PUT,
+            consumes = "application/json",
+            produces = "application/json"
+    )
+    public
+    @ResponseBody
+    void update(@RequestBody TaskTO task) {
+        taskService.update(task);
+    }
+
+    @RequestMapping(value = "/reassignNode",
+            method = RequestMethod.PUT,
+            consumes = "application/json",
+            produces = "application/json"
+    )
+    public
+    @ResponseBody
+    void reassignNode(@RequestBody NodeCombination nodeCombination) {
+        taskService.reassignNode(nodeCombination);
+    }
+
+    @RequestMapping(value = "/deleteByTaskId/{taskId}",
+            method = RequestMethod.DELETE,
+            consumes = "application/json",
+            produces = "application/json")
+    public
+    @ResponseBody
+    void delete(@PathVariable Long taskId) {
+        taskService.delete(taskId);
+    }
+
+    @ExceptionHandler(Exception.class)
+    private Exception handleException(Exception exception) {
+        return exception;
+    }
 }

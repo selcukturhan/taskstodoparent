@@ -22,7 +22,6 @@ public class TaskDAO extends GenericDAO<Task, Long>implements ITaskDAO{
         .uniqueResult();
     }
     
-    
     public Task findByIdForSearchUseCase(Long taskId) {
         Task currentTask = (Task) sessionFactory.getCurrentSession().createCriteria(Task.class).add(Restrictions.idEq(taskId))
         .setFetchMode("keywords", FetchMode.JOIN)		

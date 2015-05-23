@@ -102,7 +102,7 @@
 		<dependency>
 			<groupId>com.google.apis</groupId>
 			<artifactId>google-api-services-customsearch</artifactId>
-			<version>v1-rev40-1.18.0-rc</version>
+			<version>v1-rev46-1.20.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.http-client</groupId>

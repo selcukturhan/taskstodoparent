@@ -7,7 +7,7 @@ import org.taskstodo.entity.Task;
 import java.util.Set;
 
 
-@Service(value="LevelWeightingStrategy")
+@Service(value="levelWeightingStrategy")
 public class LevelWeightingStrategy implements IWeightingStrategy {
 	@Override
 	public QueryContext computeWeighting(final Task currentTask) {
@@ -21,9 +21,9 @@ public class LevelWeightingStrategy implements IWeightingStrategy {
 	protected String getKeywordsAsString(final Set<Keyword> keywords){
 		final StringBuilder keywordsAsString = new StringBuilder("");
 		if(keywords != null){
-			for (Keyword keyword : keywords) {
-				keywordsAsString.append(keyword.getValue() + " ");
-			}
+            keywords.forEach(
+			    keyword -> keywordsAsString.append(keyword.getValue() + " ")
+            );
 		}
 		return keywordsAsString.toString();
 	}
