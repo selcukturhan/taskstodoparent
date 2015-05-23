@@ -21,9 +21,9 @@ public class GoogleSearchService implements ISearchEngineService {
 
     public static final Logger logger = LoggerFactory.getLogger(GoogleSearchService.class);
     //api key
-    final private String API_KEY = "AIzaSyDIE9K-9OVpQUPkLRAB1YjJ0neHfNSG9tM";
+    final private String API_KEY = "";
     //custom search engine ID
-    final private String SEARCH_ENGINE_ID = "003281050901061570646:jfufua7gj3a";
+    final private String SEARCH_ENGINE_ID = "";
 
     /* (non-Javadoc)
 	 * @see org.taskstodo.dao.SearchService#doSearch(java.lang.String)
