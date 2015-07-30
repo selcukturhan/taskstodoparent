@@ -3,16 +3,16 @@ package taskcontextsearch.rank;
 import com.google.api.services.customsearch.model.Result;
 import org.apache.lucene.document.Document;
 
-public class GoogleResultOriginDocument {
-    private Result googleResult;
+public class SEResultWithOriginDocument {
+    private Result seResult;
     private Document originDocument;
 
-    public Result getGoogleResult() {
-        return googleResult;
+    public Result getSeResult() {
+        return seResult;
     }
 
-    public void setGoogleResult(Result googleResult) {
-        this.googleResult = googleResult;
+    public void setSeResult(Result seResult) {
+        this.seResult = seResult;
     }
 
     public Document getOriginDocument() {

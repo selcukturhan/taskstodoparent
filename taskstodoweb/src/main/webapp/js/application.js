@@ -886,9 +886,16 @@ function isSelected(){
 	}
 }
 
+function showSearchModal(){
+    $('#taskcontextInput').val('')
+    $('#primarySearchTable').empty();
+    $('#contextSearchTable').empty();
+}
+
+
 function searchTaskContext(){
-	
-	var selectedNode = $('#taskTree').jstree('get_selected');
+
+    var selectedNode = $('#taskTree').jstree('get_selected');
 	var selectedTask = getTaskByNodeId(selectedNode.attr('id'));
 	
 	

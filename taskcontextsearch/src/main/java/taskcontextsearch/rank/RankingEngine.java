@@ -50,7 +50,6 @@ public class RankingEngine implements IRankingEngine {
     @Value("${chunkSize}")
     private int chunkSize;
 
-    // TODO: simil. options
     @Override
     public List<Document> rank(final Task currentTask, final List<Document> originPageContent) {
         Assert.notNull(originPageContent);

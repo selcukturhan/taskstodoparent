@@ -15,18 +15,19 @@ public class QueryBuilder {
     public static final Logger logger = LoggerFactory.getLogger(QueryBuilder.class);
 
     public Query buildQuery(final QueryContext queryContext) throws Exception {
+        logger.info("Checking preconditions for querybuild....");
         Assert.notNull(queryContext, "Precondition error, please provide queryContext");
         final BooleanQuery rootQuery = new BooleanQuery();
         final StandardAnalyzer analyzer = new StandardAnalyzer(Version.LUCENE_4_9);
         QueryContext currentQueryContext = queryContext;
         while (currentQueryContext != null) {
-            Query query = new QueryParser(Version.LUCENE_4_9,
-                    currentQueryContext.getField(),
-                    analyzer).parse(currentQueryContext.getText());
+            Query query = new QueryParser(Version.LUCENE_4_9, currentQueryContext.getField(), analyzer)
+                                            .parse(currentQueryContext.getText());
             query.setBoost(currentQueryContext.getBoost());
             rootQuery.add(query, BooleanClause.Occur.SHOULD);
             currentQueryContext = currentQueryContext.getParent();
         }
+        logger.info("Finished querybuild....");
         return rootQuery;
     }
 }

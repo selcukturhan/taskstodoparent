@@ -1,7 +1,8 @@
 package taskcontextsearch.rank;
 
 import com.google.api.services.customsearch.model.Result;
-import org.apache.lucene.document.Document;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
@@ -16,46 +17,60 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 @Component
-public class PageHarvesterImpl implements IPageHarvester{
+public class PageHarvesterImpl implements IPageHarvester {
+
+    public static final Logger logger = LoggerFactory.getLogger(PageHarvesterImpl.class);
 
     @Autowired
     private ThreadPoolTaskExecutor taskExecutor;
 
-    public List<GoogleResultOriginDocument> execute(final List<Result> searchResults) throws InterruptedException, ExecutionException {
+    public List<SEResultWithOriginDocument> execute(final List<Result> searchResults) throws InterruptedException, ExecutionException {
         //#1: We want to fetch the whole pagecontent and not just the snippet.
         //Therefore get pagecontent for retrieved results.
-        //Prepare in<<itialsearchresults for reranking
-        final Collection<Callable<GoogleResultOriginDocument>> fetchIndexWorkers = new ArrayList<>();
+        //Prepare initialsearchresults for reranking
+        logger.info("Preparing FetchIndexWorkers...");
+        final Collection<Callable<SEResultWithOriginDocument>> fetchIndexWorkers = new ArrayList<>();
         searchResults.forEach(result ->
                 fetchIndexWorkers.add(new FetchIndexWorker(result)));
 
         //Now execute FetchIndexWorker for each initial searchresult, to get the whole pagecontent
-        //TODO: CHECK if order is the same
-        final List<Future<GoogleResultOriginDocument>> result = new ArrayList<>(fetchIndexWorkers.size());
+        final List<Future<SEResultWithOriginDocument>> result = new ArrayList<>(fetchIndexWorkers.size());
         fetchIndexWorkers.
-            forEach(
-                    document -> result.add(taskExecutor.submit(document))
-            );
+                forEach(
+                        fetchIndexWorker -> result.add(taskExecutor.submit(fetchIndexWorker))
+                );
+        logger.info("FetchIndexWorkers submitted...");
 
         for (int i = 0; i < result.size(); i++) {
-            if(result.get(i) == null
-                    || result.get(i).get() == null
-                    ||result.get(i).get().getOriginDocument() == null
-                    || result.get(i).get().getOriginDocument().get("content") == null
-                    ||result.get(i).get().getOriginDocument().get("content").trim().isEmpty())
+            logger.info("Check if documents must be deleted...");
+            if (isOriginDocumentSuccesfullyObtained(result.get(i))) {
+                logger.info("Removing document with index: " + i);
                 result.remove(i);
+            }
+
         }
 
-        final List<GoogleResultOriginDocument> originResult = new ArrayList<>(result.size());
+        final List<SEResultWithOriginDocument> originResult = new ArrayList<>(result.size());
         result.forEach(googleResultOriginDocument -> {
             try {
                 originResult.add(googleResultOriginDocument.get());
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
+            } catch (InterruptedException | ExecutionException e) {
+                logger.error("Error: " + e.getLocalizedMessage());
             }
         });
         return originResult;
+    }
+
+    private boolean isOriginDocumentSuccesfullyObtained(final Future<SEResultWithOriginDocument> originDocument) {
+        try {
+            return originDocument == null
+                    || originDocument.get() == null
+                    || originDocument.get().getOriginDocument() == null
+                    || originDocument.get().getOriginDocument().get("content") == null
+                    || originDocument.get().getOriginDocument().get("content").trim().isEmpty();
+        } catch (InterruptedException | ExecutionException e) {
+            logger.error("Error: " + e.getLocalizedMessage());
+            return false;
+        }
     }
 }

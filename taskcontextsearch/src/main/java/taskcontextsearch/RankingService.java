@@ -8,9 +8,8 @@ import org.springframework.stereotype.Service;
 import org.taskstodo.entity.Task;
 import org.taskstodo.to.ResultTO;
 import org.taskstodo.to.TaskContextSearchResultTO;
-import taskcontextsearch.rank.GoogleResultOriginDocument;
+import taskcontextsearch.rank.SEResultWithOriginDocument;
 import taskcontextsearch.rank.IRankingEngine;
-import taskcontextsearch.rank.IRankDeltaCalculator;
 import taskcontextsearch.search.ISearchEngineService;
 
 import java.util.Collections;
@@ -26,8 +25,6 @@ public class RankingService implements IRankingService {
     private IRankingEngine rankingEngine;
     @Autowired
     private IPageHarvester pageHarvester;
-    @Autowired
-    private IRankDeltaCalculator rankDeltaCalculator;
 
 
     public static final Logger logger = LoggerFactory.getLogger(RankingService.class);
@@ -36,27 +33,26 @@ public class RankingService implements IRankingService {
     public TaskContextSearchResultTO getSearchResultForTerm(final String term, final Task currentTask) {
 
         final TaskContextSearchResultTO contextSearchResult = new TaskContextSearchResultTO();
-        List<GoogleResultOriginDocument> results = Collections.emptyList();
+        List<SEResultWithOriginDocument> results = Collections.emptyList();
         try {
             results = pageHarvester.execute(searchEngineService.doSearch(term));
         } catch (Exception e) {
-            e.printStackTrace();
+            logger.error("Error during pageharvest", e.getLocalizedMessage());
         }
 
         results.forEach(result ->
-                        contextSearchResult.addPrimaryResult(new ResultTO(result.getGoogleResult().getSnippet(),
-                                result.getGoogleResult().getLink()))
+                        contextSearchResult.addPrimaryResult(new ResultTO(result.getSeResult().getSnippet(),
+                                result.getSeResult().getLink()))
         );
 
         final List<Document> originPages = results.stream()
-                .map(GoogleResultOriginDocument::getOriginDocument)
+                .map(SEResultWithOriginDocument::getOriginDocument)
                 .collect(Collectors.toList());
 
         rankingEngine.rank(currentTask, originPages).
                 forEach(document ->
                         contextSearchResult.addRankedResult(new ResultTO(document.get("snippet"), document.get("url"))));
 
-        rankDeltaCalculator.compute(contextSearchResult.getPrimaryResult(), contextSearchResult.getRankedResult());
         return contextSearchResult;
     }
 }

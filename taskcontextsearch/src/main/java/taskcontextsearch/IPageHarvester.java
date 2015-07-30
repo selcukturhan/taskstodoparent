@@ -1,12 +1,10 @@
 package taskcontextsearch;
 
 import com.google.api.services.customsearch.model.Result;
-import org.apache.lucene.document.Document;
-import taskcontextsearch.rank.GoogleResultOriginDocument;
+import taskcontextsearch.rank.SEResultWithOriginDocument;
 
 import java.util.List;
-import java.util.concurrent.Future;
 
 public interface IPageHarvester {
-    public List<GoogleResultOriginDocument> execute(final List<Result> searchResults) throws Exception;
+    public List<SEResultWithOriginDocument> execute(final List<Result> searchResults) throws Exception;
 }

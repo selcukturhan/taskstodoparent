@@ -11,16 +11,15 @@ import org.apache.tika.parser.Parser;
 import org.apache.tika.sax.BodyContentHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import taskcontextsearch.rank.GoogleResultOriginDocument;
+import taskcontextsearch.rank.SEResultWithOriginDocument;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.net.URLConnection;
 import java.util.concurrent.Callable;
 
-public final class FetchIndexWorker implements Callable<GoogleResultOriginDocument>{
+public final class FetchIndexWorker implements Callable<SEResultWithOriginDocument>{
 
 	public static final Logger logger = LoggerFactory.getLogger(FetchIndexWorker.class);
 	private final Result result;
@@ -34,33 +33,33 @@ public final class FetchIndexWorker implements Callable<GoogleResultOriginDocume
     }
 
     @Override
-	public GoogleResultOriginDocument call() throws Exception {
+	public SEResultWithOriginDocument call() throws Exception {
 		InputStream inputStream = null;
-        GoogleResultOriginDocument googleResultOriginDocument = new GoogleResultOriginDocument();
+        SEResultWithOriginDocument SEResultWithOriginDocument = new SEResultWithOriginDocument();
         final Document document = new Document();
 		try {
-            HttpURLConnection urlConnection =  (HttpURLConnection) new URL(result.getLink()).openConnection();
+            final HttpURLConnection urlConnection =  (HttpURLConnection) new URL(result.getLink()).openConnection();
 
             urlConnection.addRequestProperty(REQUEST_USER_AGENT_KEY, REQUEST_USER_AGENT);
             inputStream = urlConnection.getInputStream();
-			if(urlConnection.getResponseCode() != HttpURLConnection.HTTP_OK) {
-                System.out.println("####CODE####" + urlConnection.getResponseCode() );
+			if(!isResponseCodeValid(urlConnection.getResponseCode())) {
+				logger.warn("HTTP Response not OK => ####CODE####: " + urlConnection.getResponseCode());
                 return null;
             }
 			final Parser parser = new AutoDetectParser();
 			final BodyContentHandler handler = new BodyContentHandler(WRITE_LIMIT);
 		    final Metadata metadata = new Metadata();
 		    parser.parse(inputStream, handler, metadata, new ParseContext());
-		    String plainText = handler.toString();
-		    plainText = plainText.replaceAll("\t+"," ").replaceAll("\n+"," ").replaceAll(" +"," ");
+		    final String plainText = handler.toString();
+		    final String cleanedText = plainText.replaceAll("\t+"," ").replaceAll("\n+"," ").replaceAll(" +"," ");
 
-		    document.add(new TextField("content", plainText	, org.apache.lucene.document.Field.Store.NO));
+		    document.add(new TextField("content", cleanedText	, org.apache.lucene.document.Field.Store.NO));
 			document.add(new StoredField("url" , result.getLink()));
 			document.add(new StoredField("snippet", result.getSnippet()));
-            googleResultOriginDocument.setOriginDocument(document);
-			googleResultOriginDocument.setGoogleResult(result);
+            SEResultWithOriginDocument.setOriginDocument(document);
+			SEResultWithOriginDocument.setSeResult(result);
 
-			logger.info(result.getLink());
+			logger.info(result.getLink() + "successfully got originpage");
 		} catch (Exception e) {
             //Mark broken job inorder to remove it from comparation list
 			logger.error("Error during page harvesting: " + e.getLocalizedMessage());
@@ -74,6 +73,11 @@ public final class FetchIndexWorker implements Callable<GoogleResultOriginDocume
 				}
 			}
 		}
-		return googleResultOriginDocument;
+		return SEResultWithOriginDocument;
 	}
+
+	private boolean isResponseCodeValid(final int responseCode){
+		return responseCode == HttpURLConnection.HTTP_OK;
+	}
+
 }
